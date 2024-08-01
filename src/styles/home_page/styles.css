@@ -1,0 +1,139 @@
+/* border Indicator */
+.list--item:nth-child(1) > a {
+	border-bottom: 3px solid var(--colorSecundario);
+}
+
+/* ----- */
+
+/* Slider Automatico */
+
+.slider-container {
+	position: relative;
+	overflow: hidden;
+
+	width: 100%;
+}
+
+.slider {
+	/* --colorPrimario y colorPrimario2 con opacidad */
+	background-image: linear-gradient(hsla(231, 70%, 30%, 0.9) 15%, hsla(224, 70%, 40%, 0.7) 30%);
+	height: 100vh;
+	position: relative;
+}
+/* No se hizo por img para facilitar la iteracion por JS */
+.slider--picture0,
+.slider--picture1,
+.slider--picture2,
+.slider--picture3,
+.slider--picture4 {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+}
+
+.slider--picture0 {
+	z-index: -200;
+}
+
+.slider--picture1 {
+	z-index: -400;
+}
+
+.slider--picture2 {
+	z-index: -600;
+}
+
+.slider--picture3 {
+	z-index: -800;
+}
+
+.slider--picture4 {
+	z-index: -1000;
+}
+
+.slider--img0,
+.slider--img1,
+.slider--img2,
+.slider--img3,
+.slider--img4 {
+	position: relative;
+	z-index: -2000;
+	height: 100vh;
+	width: 100%;
+	object-fit: cover;
+}
+
+/* Los que considero que no se ven bien */
+.slider--img0 {
+	object-position: 55%;
+}
+
+.slider--img2 {
+	object-position: 44%;
+}
+
+.slider--img3 {
+	object-position: 40%;
+}
+
+/* efecto de onda */
+
+.wave {
+	background-image: url(/img/svg/wave.svg);
+	position: absolute;
+	bottom: -5%;
+	width: 600%;
+	height: 400px;
+	transform: rotateX(180deg);
+	background-position: bottom;
+
+	animation: w 15s linear infinite;
+}
+
+/* investigar esta reaccion  particular en el key frame */
+@keyframes w {
+	0% {
+		margin-left: 0;
+	}
+	100% {
+		margin-left: -1600px;
+	}
+}
+
+/* title H1 */
+
+.title-container {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	position: absolute;
+	font-family: 'Ballet', 'Outfit', sans-serif;
+	color: var(--white);
+	width: 75%;
+	letter-spacing: 5px;
+	line-height: 1.5;
+	font-size: var(--letterSizeTitle);
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+@media (min-width: 600px) {
+	.title {
+		width: 450px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.title {
+		font-size: calc(var(--letterSizeTitle) * 1.3);
+		text-align: center;
+		width: 100%;
+	}
+}
