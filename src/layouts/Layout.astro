@@ -149,7 +149,7 @@ const { title } = Astro.props;
       <div class="menu-container">
         <div class="menu">
           <!-- Logo -->
-          <a title="Logo" href="./" class="logo">
+          <a title="Logo" href="/" class="logo">
             <picture>
               <!-- adaptar imagenes -->
 
@@ -169,20 +169,20 @@ const { title } = Astro.props;
             <div data-section="header" data-content="title-desactive-menu" title="Disable menu" class="menu-desactive" id="menu-desactive"></div>
             <ul class="list" id="list">
               <li class="list--item">
-                <a data-section="header" data-content="title-nav-home" title="Home" href="index.html">Home</a>
+                <a data-section="header" data-content="title-nav-home" title="Home" href="/">Home</a>
               </li>
               <li class="list--item">
-                <a data-section="header" data-content="title-nav-about_us" title="About us" href="about_us.html">About us</a>
+                <a data-section="header" data-content="title-nav-about_us" title="About us" href="/about_us/">About us</a>
               </li>
               <li class="list--item">
                 <a data-section="header" data-content="title-nav-programs" title="Programs" href="/programs/">Programs</a>
               </li>
               <li class="list--item">
-                <a title="Blog" href="blog.html">Blog</a>
+                <a title="Blog" href="/blog/">Blog</a>
               </li>
 
               <li class="list--item">
-                <a data-section="header" data-content="title-nav-contacts" title="Contact us" href="contact_us.html">Contact us</a>
+                <a data-section="header" data-content="title-nav-contacts" title="Contact us" href="/contact_us/">Contact us</a>
               </li>
               <li class="list--item donate-buttom">
                 <a
@@ -205,7 +205,7 @@ const { title } = Astro.props;
                         data-lang="es"
                         data-section="header"
                         data-content="alt-es"
-                        src="img/png/icon/republica-dominicana.png"
+                        src="/img/png/icon/republica-dominicana.png"
                         alt="Flag of The Dominican Republic"
                       />
                     </li>
@@ -215,7 +215,7 @@ const { title } = Astro.props;
                         data-lang="en"
                         data-section="header"
                         data-content="alt-en"
-                        src="img/png/icon/estados-unidos.png"
+                        src="/img/png/icon/estados-unidos.png"
                         alt="Flag of The United States"
                       />
                     </li>
@@ -241,12 +241,12 @@ const { title } = Astro.props;
             <picture>
               <!-- adaptar imagenes -->
 
-              <source srcset="img/webp/logo/logo_name.webp" />
+              <source srcset="/img/webp/logo/logo_name.webp" />
               <img
                 data-section="footer"
                 data-content="alt-logo"
                 class="logo--img"
-                src="img/png/logo/logo_name_png.png"
+                src="/img/png/logo/logo_name_png.png"
                 alt="Logo de banderas de republica dominicana y estados unidos donde se trabaja en una contribucion social en Connecticut"
               />
             </picture>
