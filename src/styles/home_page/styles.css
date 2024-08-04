@@ -1,9 +1,4 @@
-/* border Indicator */
-.list--item:nth-child(1) > a {
-	border-bottom: 3px solid var(--colorSecundario);
-}
 
-/* ----- */
 
 /* Slider Automatico */
 
