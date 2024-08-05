@@ -27,7 +27,20 @@
 	justify-content: flex-end;
 	align-items: center;
 	/* para efecto sticky */
+
+	.menu--modal {
+		padding: 0;
+		border: 0;
+	
+
+	}
+
+	
+	.menu--modal::backdrop {
+		background-color: hsla(0, 0%, 5%,0.6);
+	}
 }
+
 
 .logo {
 	display: inline-block;
@@ -85,18 +98,40 @@
 	background-color: var(--white);
 	position: fixed;
 	top: 0;
-	right: 0%;
-	transform: translateX(100%);
+right: 0%;
 	overflow-y: scroll;
 	transition: transform 0.4s ease;
 	box-shadow: var(--shadowGeneral);
 	z-index: 1400;
+	view-transition-name: menu;
 }
 
-.menu__start {
+
+::view-transition-old(menu){
+ 
+	animation: transMenu 0.3s ease reverse;
+  }
+
+::view-transition-new(menu){
+ 
+	animation: transMenu 0.3s ease ;
+  }
+
+  @keyframes transMenu{
+
+	from {
+		transform: translateX(120%);
+	}
+
+	to {
 	transform: translateX(0%);
-	/* Active event menu */
 }
+
+
+  }
+
+
+
 
 /* menu-desactive va ubicado en otro contenedor*/
 .menu-desactive {
@@ -278,7 +313,7 @@
 		position: absolute;
 		overflow: initial;
 		/* producto del desplzamiento del formato mobile */
-		right: 0;
+
 		transform: translateX(0%);
 		transition: none;
 		right: 125px;
