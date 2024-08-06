@@ -19,10 +19,9 @@ const Menu = ({ menuSelect }: Props) => {
       <div class="menu">
         <a title="Logo" href="/" class="logo">
           <picture>
-            <source srcset="/img/webp/logo/logo_name.webp" />
             <img
               class="logo--img"
-              src="/img/png/logo/logo_name_png.png"
+              src="/img/webp/logo/logo_name.webp"
               alt="Logo with flags of The Dominican Republic and The United States where they make a social contribution in Connecticut"
               data-section="header"
               data-content="alt-logo"
@@ -161,7 +160,7 @@ const Menu = ({ menuSelect }: Props) => {
                       data-lang="es"
                       data-section="header"
                       data-content="alt-es"
-                      src="/img/png/icon/republica-dominicana.png"
+                      src="/img/webp/republica-dominicana.webp"
                       alt="Flag of The Dominican Republic"
                     />
                   </li>
@@ -179,7 +178,7 @@ const Menu = ({ menuSelect }: Props) => {
                       data-lang="en"
                       data-section="header"
                       data-content="alt-en"
-                      src="/img/png/icon/estados-unidos.png"
+                      src="/img/webp/estados-unidos.webp"
                       alt="Flag of The United States"
                     />
                   </li>

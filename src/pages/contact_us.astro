@@ -1,23 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-import BannerPages from '../components/BannerPages.astro';
+import BannerPages from "../components/BannerPages.astro";
 ---
 
 <Layout title="Contact us" menuSelect={4}>
-  <BannerPages upperTitle="CONTACT US" wave="/img/svg/contactanos/wave_contactanos.svg" />
+  <BannerPages
+    upperTitle="CONTACT US"
+    wave="/img/svg/contactanos/wave_contactanos.svg"
+  />
   <form class="form-block" id="form">
     <div class="form-block--group-information">
       <h3 data-section="info-form" data-content="title">Information</h3>
       <p><i class="fa-solid fa-phone"></i>+1 203-913-5370</p>
-      <p><i class="fa-solid fa-location-dot"></i>853 Fairfield Ave 2nd Bridgeport CT 06605</p>
+      <p>
+        <i class="fa-solid fa-location-dot"></i>853 Fairfield Ave 2nd Bridgeport
+        CT 06605
+      </p>
       <p><i class="fa-solid fa-envelope"></i>contact@dacct.org</p>
     </div>
     <div class="form-block--group-inputs">
-      <label data-section="form" data-content="name" for="name">Full name:</label>
+      <label data-section="form" data-content="name" for="name"
+        >Full name:</label
+      >
 
-      <input data-validator="name" placeholder="John Doe" id="name" type="text" name="Name" />
-      <p data-section="form" data-content="name-validator">Only alphabetic characters with a space between each word</p>
+      <input
+        data-validator="name"
+        placeholder="John Doe"
+        id="name"
+        type="text"
+        name="Name"
+      />
+      <p data-section="form" data-content="name-validator">
+        Only alphabetic characters with a space between each word
+      </p>
       <p data-section="form" data-content="required">Mandatory field</p>
 
       <label data-section="form" data-content="email" for="email">Email:</label>
@@ -31,22 +47,49 @@ import BannerPages from '../components/BannerPages.astro';
         type="text"
         name="Email"
       />
-      <p data-section="form" data-content="email-validator">Please enter a valid email address</p>
+      <p data-section="form" data-content="email-validator">
+        Please enter a valid email address
+      </p>
       <p data-section="form" data-content="required">Mandatory field</p>
 
       <label data-section="form" data-content="phone" for="phone">Phone:</label>
 
-      <input data-validator="phone" type="text" name="Phone" id="phone" placeholder="+1 (555) 123-45-67" />
-      <p data-section="form" data-content="phone-validator">Please Input a valid phone number</p>
+      <input
+        data-validator="phone"
+        type="text"
+        name="Phone"
+        id="phone"
+        placeholder="+1 (555) 123-45-67"
+      />
+      <p data-section="form" data-content="phone-validator">
+        Please Input a valid phone number
+      </p>
       <p data-section="form" data-content="required">Mandatory field</p>
 
-      <label data-section="form" data-content="message" for="message">Message:</label>
+      <label data-section="form" data-content="message" for="message"
+        >Message:</label
+      >
 
-      <textarea data-section="form" data-content="message-input" placeholder="Share your ideas" name="Message" id="message"></textarea>
+      <textarea
+        data-section="form"
+        data-content="message-input"
+        placeholder="Share your ideas"
+        name="Message"
+        id="message"></textarea>
 
-      <p data-section="form" data-content="submit-error" id="formSubmitError">ERROR: Incorrect data</p>
-      <input data-section="form" data-content="submit" type="submit" value="Send" id="formSubmit" />
-      <p data-section="form" data-content="submit-send">Your form was successfully submitted</p>
+      <p data-section="form" data-content="submit-error" id="formSubmitError">
+        ERROR: Incorrect data
+      </p>
+      <input
+        data-section="form"
+        data-content="submit"
+        type="submit"
+        value="Send"
+        id="formSubmit"
+      />
+      <p data-section="form" data-content="submit-send">
+        Your form was successfully submitted
+      </p>
     </div>
   </form>
 
@@ -56,8 +99,10 @@ import BannerPages from '../components/BannerPages.astro';
     <div class="container-paragraph--text">
       <p data-section="info-form" data-content="paragraph">
         <strong>Be a volunteer!</strong>
-        The objective of The Dominican American Coalition of Connecticut is to educate and improve the quality of life of many people. Thanks to people
-        like you we'll be able to reach our goals. If you have time to collaborate in our projects, Contact us and become a volunteer!
+        The objective of The Dominican American Coalition of Connecticut is to educate
+        and improve the quality of life of many people. Thanks to people like you
+        we'll be able to reach our goals. If you have time to collaborate in our
+        projects, Contact us and become a volunteer!
       </p>
     </div>
     <div class="container-paragraph--wave"></div>
@@ -83,7 +128,7 @@ import BannerPages from '../components/BannerPages.astro';
   }
 
   .form-block::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100px;
@@ -360,7 +405,7 @@ container paragraph
     bottom: -10px;
     width: 100%;
     height: 100vh;
-    background-image: url(/img/svg/programs/wave_programs_footer_contacts.svg);
+    background-image: url(/img/svg/contactanos/wave_footer.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
