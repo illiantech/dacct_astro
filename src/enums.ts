@@ -3,5 +3,5 @@ export const enum MenuSelect {
   aboutUs,
   programs,
   blog,
-  contactUs
+  contactUs,
 }

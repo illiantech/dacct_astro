@@ -94,50 +94,35 @@
 
 .nav {
 	height: 100vh;
-	width: 60vw;
+	width: 100%;
 	background-color: var(--white);
 	position: fixed;
 	top: 0;
-right: 0%;
+	right: -110%;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
 	overflow-y: scroll;
-	transition: transform 0.4s ease;
 	box-shadow: var(--shadowGeneral);
 	z-index: 1400;
-	view-transition-name: menu;
+	transition: .4s ease-in-out;
+	transition-property: right, opacity;
+
 }
 
+.nav__active {
+	opacity: 1;
+	right: 0%;
 
-::view-transition-old(menu){
- 
-	animation: transMenu 0.3s ease reverse;
-  }
-
-::view-transition-new(menu){
- 
-	animation: transMenu 0.3s ease ;
-  }
-
-  @keyframes transMenu{
-
-	from {
-		transform: translateX(120%);
-	}
-
-	to {
-	transform: translateX(0%);
 }
-
-
-  }
-
 
 
 
 /* menu-desactive va ubicado en otro contenedor*/
 .menu-desactive {
 	height: 20px;
-	top: 50px;
-	left: 86%;
+	top: 5%;
+	right: 5%;
 }
 
 .menu-desactive::after,
@@ -163,7 +148,7 @@ right: 0%;
 	padding-left: 0;
 	list-style-type: none;
 
-	width: 100%;
+	width: 95%;
 }
 
 .list--item {
@@ -176,18 +161,23 @@ right: 0%;
 
 .list--item > a {
 	text-decoration: none;
-	font-size: var(--letterSizeSmall);
+	font-size: calc(var(--letterSizeSmall) * 1.4);
 	margin-left: 15px;
 	color: var(--black);
+	height: 30px;
+}
+
+.list--item > a:hover,	.list--item__select > a {
 	border-bottom: 3px solid var(--colorSecundario);
 }
+
 
 
 /* Bottom de donar */
 
 .donate-buttom {
 	position: absolute;
-	top: 103%;
+	top: 110%;
 	left: 2.5%;
 	width: 100px;
 	height: 50px;
@@ -205,18 +195,28 @@ right: 0%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: calc(var(--letterSizeMedium) / 1.1);
+	font-size:var(--letterSizeMedium);
 	border-radius: 10px;
-	width: 90px;
-	height: 45px;
+	width: 100px;
+	height: 50px;
 	background-color: var(--colorPrimario);
+	transition:  0.25s ease;
+	transform: scale(0.9,0.9);
+	transition-property: transform , background-color;
+}
+
+.donate-buttom a:hover {
+
+	transform: scale(1.1);
+	background-color: var(--colorSecundario);
+	
 }
 
 /* Idioma menu */
 
 .list--item:last-child {
 	position: absolute;
-	top: 105%;
+	top:113%;
 	right: 5%;
 	display: inline-block;
 	font-size: var(--letterSizeSmall);
@@ -281,23 +281,15 @@ right: 0%;
 	margin-right: 2.5px;
 }
 
-@media (min-width: 600px) {
-	.nav {
-		width: 50vw;
-	}
+
+@media (min-width:800px){
+.list {
+	width: 80%;
+
 }
 
-@media (min-width: 800px) {
-	.nav {
-		width: 40vw;
-	}
 }
 
-@media (min-width: 1000px) {
-	.nav {
-		width: 25vw;
-	}
-}
 
 @media (min-width: 1300px) {
 	.menu-active,
@@ -312,12 +304,12 @@ right: 0%;
 		background-color: transparent;
 		position: absolute;
 		overflow: initial;
-		/* producto del desplzamiento del formato mobile */
-
-		transform: translateX(0%);
 		transition: none;
-		right: 125px;
+		right: 20%;
+		opacity: 1;
 	}
+
+
 
 	.list {
 		top: 0;
@@ -331,7 +323,6 @@ right: 0%;
 	.list--item {
 		height: 100%;
 		width: 150px;
-		border-bottom: none;
 		justify-content: center;
 	}
 
@@ -341,41 +332,25 @@ right: 0%;
 		width: auto;
 		margin-left: 0px;
 		height: 22px;
-		
-		border-bottom: 0px solid var(--colorSecundario);
-		transition: border 0.1s ease;
+		font-size: var(--letterSizeSmall);
+	
 	}
-
-	.list--item > a:hover,	.listItem__select > a {
-		border-bottom: 3px solid var(--colorSecundario);
-	}
-
 
 	/* Donar */
 	.donate-buttom {
 		position: absolute;
-		left: 102.5%;
-		top: 25%;
+		left: 100%;
+		top: 0%;
+	}
+
+	.donate-buttom >a {
 		width: 100px;
-		height: 50px;
-		justify-content: center;
+	height: 50px;
+	font-size: var(--letterSizeMedium) ;
 	}
 
-	.donate-buttom a {
-		border-radius: 10px;
-		width: 90px;
-		height: 45px;
+	
 
-		transition: all 0.2s ease;
-	}
-
-	.donate-buttom a:hover {
-		width: 100px;
-		height: 50px;
-		font-size: var(--letterSizeMedium);
-		background-color: var(--colorSecundario);
-		border-bottom: none;
-	}
 
 	/* Idioma menu */
 

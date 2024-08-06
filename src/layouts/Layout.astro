@@ -1,9 +1,9 @@
 ---
-import Menu from '../components/Menu.astro';
-import '../styles/Normalize.css';
-import '../styles/footer.css';
-
-import { MenuSelect } from '../enums';
+import "../styles/Normalize.css";
+import Menu from "../components/Menu.tsx";
+import "../styles/footer.css";
+import { MenuSelect } from "../enums.ts";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -18,7 +18,10 @@ const { title, menuSelect } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
 
     <meta name="generator" content={Astro.generator} />
     <!-- description -->
@@ -58,17 +61,29 @@ const { title, menuSelect } = Astro.props;
 
     <!-- itemprop -->
 
-    <meta itemprop="name" content="The Dominican American Coalition of Connecticut" />
+    <meta
+      itemprop="name"
+      content="The Dominican American Coalition of Connecticut"
+    />
 
-    <meta itemprop="address" content="853 Fairfield Ave 2nd Bridgeport CT 06605" />
+    <meta
+      itemprop="address"
+      content="853 Fairfield Ave 2nd Bridgeport CT 06605"
+    />
 
     <meta itemprop="telephone" content="+1 203-913-5370" />
 
-    <meta itemprop="image" content="img/webp/img-3_slider/slider-3-720-webp.webp" />
+    <meta
+      itemprop="image"
+      content="img/webp/img-3_slider/slider-3-720-webp.webp"
+    />
 
     <!-- Open graph Facebook -->
 
-    <meta property="og:title" content="The Dominican American Coalition of Connecticut" />
+    <meta
+      property="og:title"
+      content="The Dominican American Coalition of Connecticut"
+    />
 
     <meta property="og:type" content="website" />
 
@@ -84,7 +99,10 @@ const { title, menuSelect } = Astro.props;
 
     <meta name="twitter:card" content="summary" />
 
-    <meta name="twitter:title" content="The Dominican American Coalition of Connecticut" />
+    <meta
+      name="twitter:title"
+      content="The Dominican American Coalition of Connecticut"
+    />
 
     <meta
       name="twitter:description"
@@ -99,19 +117,75 @@ const { title, menuSelect } = Astro.props;
 
     <!-- iconos adaptables -->
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/favicons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/favicons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/favicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/favicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/favicons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon-16x16.png"
+    />
     <link rel="manifest" href="/favicons/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -130,18 +204,26 @@ const { title, menuSelect } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- font TITLE Ballet -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ballet&display=swap"
+      rel="stylesheet"
+    />
+
+    <ViewTransitions />
 
     <title>{title}</title>
   </head>
   <body>
     <header class="header">
       <!-- Menu -->
-      <Menu menuSelect={menuSelect} />
+      <Menu client:load menuSelect={menuSelect} />
     </header>
     <main role="main" id="main">
       <!-- Slider automatico -->
@@ -170,30 +252,52 @@ const { title, menuSelect } = Astro.props;
           <!-- Flata links de redes sociales en plantillas -->
           <ul class="contact--list">
             <li class="contact--item">
-              <a target="_blank" title="Facebook" href="https://www.facebook.com/dacctinfo/?ref=page_internal"
+              <a
+                target="_blank"
+                title="Facebook"
+                href="https://www.facebook.com/dacctinfo/?ref=page_internal"
                 ><i class="fa-brands fa-facebook-square"></i></a
               >
             </li>
             <li class="contact--item">
-              <a target="_blank" title="Telegram" href=""><i class="fa-brands fa-telegram"></i></a>
+              <a target="_blank" title="Telegram" href=""
+                ><i class="fa-brands fa-telegram"></i></a
+              >
             </li>
             <li class="contact--item">
-              <a target="_blank" title="Instagram" href="https://www.instagram.com/dominicanamericancoalitionofct/"
+              <a
+                target="_blank"
+                title="Instagram"
+                href="https://www.instagram.com/dominicanamericancoalitionofct/"
                 ><i class="fa-brands fa-instagram-square"></i></a
               >
             </li>
             <li class="contact--item">
-              <a target="_blank" data-section="footer" data-content="title-email" title="
-			Send email" href="mailto:contact@dacct.org"
+              <a
+                target="_blank"
+                data-section="footer"
+                data-content="title-email"
+                title="
+			Send email"
+                href="mailto:contact@dacct.org"
                 ><i class="fa-solid fa-envelope"></i></a
               >
             </li>
           </ul>
           <div class="container-autor">
-            <a title="Ir a linkedin" href="https://www.linkedin.com/in/daniel-pimentel-78aaa7253/" class="autor">ILLIANTECH &ensp; 2022 - 2024</a>
+            <a
+              title="Ir a linkedin"
+              href="https://www.linkedin.com/in/daniel-pimentel-78aaa7253/"
+              class="autor">ILLIANTECH &ensp; 2022 - 2024</a
+            >
           </div>
-          <p data-section="footer" data-content="paragraph" class="footer--info">
-            The Dominican-American Coalition is a non profit organization with the code 501 C 3.
+          <p
+            data-section="footer"
+            data-content="paragraph"
+            class="footer--info"
+          >
+            The Dominican-American Coalition is a non profit organization with
+            the code 501 C 3.
           </p>
         </address>
       </div>
@@ -257,10 +361,23 @@ const { title, menuSelect } = Astro.props;
     --letterSizeGiant: 6rem;
     background-color: var(--white);
     color: var(--black);
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
   }
 
-  /* scroll personalized elements particular */
+  ::view-transition-new(titleBanner) {
+    animation: titleMotion 0.6s ease;
+  }
+
+  @keyframes titleMotion {
+    from {
+      opacity: 0;
+      transform: translateY(600%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 
   .nav::-webkit-scrollbar:vertical,
   .alliance--list__mobile::-webkit-scrollbar:vertical,
@@ -273,6 +390,4 @@ const { title, menuSelect } = Astro.props;
     border: none;
     margin: 0;
   }
-
-
 </style>
