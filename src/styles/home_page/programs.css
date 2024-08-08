@@ -1,12 +1,13 @@
 .programs {
 	--widthPrograms: 300px;
-
-	opacity: 1;
+	margin-bottom: 200px;	
+	transform: translateY(100px);
+	opacity: 0;
 	transition: all 0.6s ease;
 }
 
 .programs__scroll {
-	top: 0px;
+	transform: translateY(0px);
 	opacity: 1;
 }
 
@@ -27,13 +28,13 @@
 	color: var(--white);
 	max-width: 1800px;
 	display: grid;
+	gap:80px 15px;
 	grid-template-columns: repeat(auto-fit, minmax(var(--widthPrograms), 1fr));
 }
 
 .programs--list-item {
 	width: var(--widthPrograms);
 	height: calc(var(--widthPrograms) * 1.1915);
-	margin-bottom: 100px;
 	position: relative;
 	left: calc(50% - var(--widthPrograms) / 2);
 	background: linear-gradient(213.1deg, hsl(224, 70%, 40%) 23.22%, hsl(223, 49%, 23%) 92%);

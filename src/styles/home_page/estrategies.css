@@ -59,18 +59,18 @@ overflow: hidden;
 	height: 100%;
 
 	position: relative;
-	/* -25 */
-	left: -0%;
+
+	left: -25%;
 	color: var(--white);
-	opacity: 1;
-	transition: all 1.5s ease;
+	opacity: 0;
+	transition: all 0.8s ease;
 }
 
 /* transicion opacidad y move */
 
 .card2__scroll {
 	opacity: 1;
-	left: 0;
+	left: 0%;
 }
 
 .card2--title {

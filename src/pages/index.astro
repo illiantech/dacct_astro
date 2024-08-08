@@ -8,6 +8,11 @@ import "../styles/home_page/estrategies.css";
 import "../styles/home_page/programs.css";
 import "../styles/home_page/slider_alliances.css";
 import "../styles/home_page/patrons.css";
+
+
+import BlogHome from "../components/home/Blog.tsx";
+import Strategies from "../components/home/Strategies.tsx";
+import ProgramsHome from "../components/home/Programs.tsx";
 ---
 
 <Layout menuSelect={0} title="Dominican American Coalition of Connecticut">
@@ -110,159 +115,12 @@ import "../styles/home_page/patrons.css";
 
   <hr />
   <!-- blog preview home page -->
-  <section class="blog" id="blogHome">
-    <h2 data-section="blog" data-content="title" class="blog--title">
-      Don't Miss Out! Check Our Blog
-    </h2>
-    <ul data-elementsList="blogs" id="blogList" class="blog--list">
-      <li class="blog--list-item">
-        <article class="blog--article">
-          <picture class="blog--article-picture blog--article-wave_1">
-            <source media="(min-width: 1300px)" srcset="" />
-            <source srcset="" />
-            <img src="" alt="" class="blog--article-img" />
-          </picture>
-          <time class="blog--article-time" datetime=""></time>
-          <!-- NO soprepasar de 74 caracteres en title blog -->
-          <h3 class="blog--article-title"></h3>
-          <!-- NO soprepasar de 207 caracteres en preview text -->
-          <p class="blog--article-paragraph"></p>
 
-          <span
-            data-open="0"
-            data-section="blog"
-            data-content="title-link"
-            title="See more"
-            class="article--buttom">See more</span
-          >
-        </article>
-      </li>
-      <li class="blog--list-item">
-        <article class="blog--article">
-          <picture class="blog--article-picture blog--article-wave_2">
-            <source media="(min-width: 1300px)" srcset="" />
-            <source srcset="" />
-            <img src="" alt="" class="blog--article-img" />
-          </picture>
-          <time class="blog--article-time" datetime=""></time>
-          <h3 class="blog--article-title"></h3>
-
-          <p class="blog--article-paragraph"></p>
-
-          <span
-            data-open="1"
-            data-section="blog"
-            data-content="title-link"
-            title="See more"
-            class="article--buttom">See more</span
-          >
-        </article>
-      </li>
-      <li class="blog--list-item">
-        <article class="blog--article">
-          <picture class="blog--article-picture blog--article-wave_3">
-            <source media="(min-width: 1300px)" srcset="" />
-            <source srcset="" />
-            <img src="" alt="" class="blog--article-img" />
-          </picture>
-          <time class="blog--article-time" datetime=""></time>
-          <h3 class="blog--article-title"></h3>
-
-          <p class="blog--article-paragraph"></p>
-
-          <span
-            data-open="2"
-            data-section="blog"
-            data-content="title-link"
-            title="See more"
-            class="article--buttom">See more</span
-          >
-        </article>
-      </li>
-    </ul>
-  </section>
+  <BlogHome client:visible />
   <hr />
   <!-- Seccion de estrategias -->
 
-  <div class="container-card2" id="containerCardTwo">
-    <div class="background-card2" id="bgrCardTwo">
-      <picture>
-        <source
-          media="(min-width: 1300px)"
-          srcset="/img/webp/home_page/Estrategias-home-page_1080_webp.webp"
-        />
-
-        <img
-          data-section="strategies"
-          data-content="alt"
-          class="background-card2--img"
-          src="/img/webp/home_page/Estrategias-home-page-720_webp.webp"
-          alt="A work team in a office making a social strategy"
-        />
-      </picture>
-      <!-- Contenedor de la card -->
-      <div class="background-card2--size">
-        <!-- Contenedor de la card -->
-        <section class="card2" id="cardTwo">
-          <h3
-            data-section="strategies"
-            data-content="title"
-            class="card2--title"
-          >
-            Strategies
-          </h3>
-
-          <!-- Contenedor Lista -->
-          <div class="card2--list-container">
-            <p
-              class="card2--list-paragraph"
-              data-section="strategies"
-              data-content="paragraph0"
-            >
-              Educating communities in:
-            </p>
-            <ul class="card2--list">
-              <li data-section="strategies" data-content="list0">
-                Handcrafts.
-              </li>
-              <li data-section="strategies" data-content="list1">
-                Financial education for children and adults - In alliance with
-                TD Bank and KW.
-              </li>
-              <li data-section="strategies" data-content="list2">
-                Metabolism and Nutrition - In alliance with Be - Well Kairos
-                Foundation.
-              </li>
-              <li data-section="strategies" data-content="list3">
-                Basic computer literacy for adults.
-              </li>
-              <li data-section="strategies" data-content="list4">
-                ESL program - In alliance with LEAD.
-              </li>
-              <li data-section="strategies" data-content="list5">
-                Musical Instruments.
-              </li>
-              <li data-section="strategies" data-content="list6">
-                Sports programs.
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contenedor parrafo -->
-
-          <p
-            data-section="strategies"
-            data-content="paragraph1"
-            class="card2--paragraph"
-          >
-            Future generations of Latinos can identify their heritage through
-            culture, gain a historical perspective, and understanding of their
-            cultural identity.
-          </p>
-        </section>
-      </div>
-    </div>
-  </div>
+  <Strategies client:visible />
 
   <!-- tercer peo -->
 
@@ -270,143 +128,7 @@ import "../styles/home_page/patrons.css";
   <hr />
   <!-- Progrmas -->
 
-  <section id="programs" class="programs">
-    <h2 data-section="programs" data-content="title" class="programs--title">
-      Programs
-    </h2>
-    <ul class="programs--list">
-      <li class="programs--list-item">
-        <article class="programs--list-article">
-          <img
-            class="programs--list-icon"
-            src="/img/svg/programs/chocolate_yola.svg"
-            data-section="programs"
-            data-content="alt0"
-            alt="Two hands joined together"
-          />
-
-          <h3 class="programs--list-title">
-            Chocolate <br />
-            con Yola
-          </h3>
-          <p
-            data-section="programs"
-            data-content="paragraph0"
-            class="programs--list-paragraph"
-          >
-            This program was born from the collaboration of United Healthcare,
-            Gala Foods Supermarket, and the BeWell Kairos Foundation as a
-            response to the imperative need...
-          </p>
-          <a
-            data-section="programs"
-            data-content="title-link"
-            href="programs.html#programOne"
-            title="See more"
-            class="article--buttom buttom__programs">See more</a
-          >
-        </article>
-      </li>
-      <li class="programs--list-item">
-        <article class="programs--list-article">
-          <img
-            data-section="programs"
-            data-content="alt1"
-            class="programs--list-icon"
-            src="/img/svg/programs/codac.svg"
-            alt="First aid kit with medicines"
-          />
-
-          <h3 class="programs--list-title">CODAC</h3>
-          <p
-            data-section="programs"
-            data-content="paragraph1"
-            class="programs--list-paragraph"
-          >
-            Our social assistance program with which we benefit dozens of
-            Connecticut residents with immigration applications, translations,
-            notaries, rent, food...
-          </p>
-          <a
-            data-section="programs"
-            data-content="title-link"
-            href="programs.html#programTwo"
-            title="See more"
-            class="article--buttom buttom__programs">See more</a
-          >
-        </article>
-      </li>
-      <li class="programs--list-item">
-        <article class="programs--list-article">
-          <img
-            data-section="programs"
-            data-content="alt2"
-            class="programs--list-icon"
-            src="/img/svg/programs/finanzas.svg"
-            alt="Responsible finances to learn to manage your money better"
-          />
-
-          <h3
-            data-section="programs"
-            data-content="sub-title2"
-            class="programs--list-title"
-          >
-            My<br />Finances
-          </h3>
-          <p
-            data-section="programs"
-            data-content="paragraph2"
-            class="programs--list-paragraph"
-          >
-            Our program seeks to promote financial stability in the community by
-            providing financial literacy. The more knowledge people have about
-            credit and financial services...
-          </p>
-          <a
-            data-section="programs"
-            data-content="title-link"
-            href="programs.html#programThree"
-            title="See more"
-            class="article--buttom buttom__programs">See more</a
-          >
-        </article>
-      </li>
-      <li class="programs--list-item">
-        <article class="programs--list-article">
-          <img
-            data-section="programs"
-            data-content="alt3"
-            class="programs--list-icon"
-            src="/img/svg/programs/co-alianza.svg"
-            alt="Alliance between people with their hands on their hearts"
-          />
-
-          <h3
-            data-section="programs"
-            data-content="sub-title3"
-            class="programs--list-title"
-          >
-            Co<br />Alliance
-          </h3>
-          <p
-            data-section="programs"
-            data-content="paragraph3"
-            class="programs--list-paragraph"
-          >
-            Our Co-Alliance program seeks to establish partnerships with social
-            and private organizations on issues relevant to the communities...
-          </p>
-          <a
-            data-section="programs"
-            data-content="title-link"
-            href="programs.html#programFour"
-            title="See more"
-            class="article--buttom buttom__programs">See more</a
-          >
-        </article>
-      </li>
-    </ul>
-  </section>
+    <ProgramsHome />
 
   <hr />
   <!-- alianazas slider -->

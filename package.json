@@ -16,7 +16,8 @@
     "@types/dom-view-transitions": "^1.0.5",
     "astro": "^4.12.3",
     "preact": "^10.23.1",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.0.1",

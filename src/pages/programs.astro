@@ -12,7 +12,7 @@ import BannerPages from "../components/BannerPages.astro";
   <!-- PROGRAMAS -->
 
   <ul class="programs-list" id="programs">
-    <li class="programs-list--item programs-list--item__scroll">
+    <li class="programs-list--item">
       <div id="programOne"></div>
       <article class="programs-list--article">
         <img
@@ -210,10 +210,10 @@ import BannerPages from "../components/BannerPages.astro";
     position: relative;
   }
 
-  /* .programs-list--item:nth-child(2n) {
+  .programs-list--item:nth-child(2n) {
     transform: scalex(-1);
     top: 15%;
-  } */
+  }
 
   #programOne,
   #programTwo,
@@ -240,12 +240,12 @@ import BannerPages from "../components/BannerPages.astro";
 
   /* animation element scroll JS */
 
-  .programs-list--item__scroll:nth-child(n) > .programs-list--article {
-    transform: translateX(0%);
-  }
-
   .programs-list--item:nth-child(n) .programs-list--article {
     transform: translateX(200%);
+  }
+
+  .programs-list--item__scroll:nth-child(n) > .programs-list--article {
+    transform: translateX(0%);
   }
 
   .programs-list--icon {
