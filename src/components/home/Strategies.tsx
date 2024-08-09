@@ -1,25 +1,12 @@
-import { useEffect, useRef, useState } from "preact/hooks";
-// import { useIntersectionObserver } from "../InterObsProvider";
+import { useRef } from "preact/hooks";
+import useIntersectingElmts from "../../hooks/useIntersectingElmts";
 
 const Strategies = () => {
   const ref = useRef<HTMLDivElement>(null);
-  // const [intersecting, setIntersecting] = useState<boolean>(false);
-  // const { observe, unobserve, entries } = useIntersectionObserver();
-
-  // useEffect(() => {
-  //   if (ref.current) observe(ref.current);
-
-  //   return () => {
-  //     if (ref.current) unobserve(ref.current);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   if (entries.length > 0) {
-  //     const entry = entries.find((entry) => entry.target === ref.current);
-  //     if (entry) setIntersecting(entry.isIntersecting);
-  //   }
-  // }, [entries]);
+  const { intersecting } = useIntersectingElmts({
+    ref,
+    options: { threshold: 0.5 },
+  });
 
   return (
     <div ref={ref} class="container-card2" id="containerCardTwo">
@@ -31,6 +18,8 @@ const Strategies = () => {
           />
 
           <img
+            loading="lazy"
+            decoding="async"
             data-section="strategies"
             data-content="alt"
             class="background-card2--img"
@@ -41,7 +30,7 @@ const Strategies = () => {
 
         <div class="background-card2--size">
           <section
-            // class={intersecting ? "card2 card2__scroll" : "card2"}
+            class={intersecting ? "card2 card2__scroll" : "card2"}
             id="cardTwo"
           >
             <h3

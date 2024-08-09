@@ -15,6 +15,7 @@ const { wave, upperTitle } = Astro.props;
     />
 
     <img
+      decoding="async"
       data-section="banner"
       data-content="alt"
       class="banner--img"
@@ -32,7 +33,7 @@ const { wave, upperTitle } = Astro.props;
   >
     {upperTitle}
   </h2>
-  <img src={wave} alt="wave" class="wavePages" />
+  <img decoding="async" src={wave} alt="wave" class="wavePages" />
 </div>
 
 <style>

@@ -1,26 +1,12 @@
-import { useEffect, useRef, useState } from "preact/hooks";
-import { useIntersectionObserver } from "../InterObsProvider";
+import { useRef } from "preact/hooks";
+import useIntersectingElmts from "../../hooks/useIntersectingElmts";
 
 const ProgramsHome = () => {
-  const [intersecting, setIntersecting] = useState<boolean>(false);
   const ref = useRef<HTMLElement>(null);
-  const { observe, unobserve, entries } = useIntersectionObserver();
-
-  useEffect(() => {
-    if (ref.current) observe(ref.current);
-
-    return () => {
-      if (ref.current) unobserve(ref.current);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (entries.length > 0) {
-      const entry = entries.find((entry) => entry.target === ref.current);
-      if (entry) setIntersecting(entry.isIntersecting);
-      console.log("inter");
-    }
-  }, [entries]);
+  const { intersecting } = useIntersectingElmts({
+    ref,
+    options: { threshold: 0.3 },
+  });
 
   return (
     <section
@@ -35,6 +21,8 @@ const ProgramsHome = () => {
         <li class="programs--list-item">
           <article class="programs--list-article">
             <img
+              loading="lazy"
+              decoding="async"
               class="programs--list-icon"
               src="/img/svg/programs/chocolate_yola.svg"
               data-section="programs"
@@ -58,7 +46,7 @@ const ProgramsHome = () => {
             <a
               data-section="programs"
               data-content="title-link"
-              href="programs.html#programOne"
+              href="/programs/#programOne"
               title="See more"
               class="article--buttom buttom__programs"
             >
@@ -69,6 +57,8 @@ const ProgramsHome = () => {
         <li class="programs--list-item">
           <article class="programs--list-article">
             <img
+              loading="lazy"
+              decoding="async"
               data-section="programs"
               data-content="alt1"
               class="programs--list-icon"
@@ -89,7 +79,7 @@ const ProgramsHome = () => {
             <a
               data-section="programs"
               data-content="title-link"
-              href="programs.html#programTwo"
+              href="/programs/#programTwo"
               title="See more"
               class="article--buttom buttom__programs"
             >
@@ -100,6 +90,8 @@ const ProgramsHome = () => {
         <li class="programs--list-item">
           <article class="programs--list-article">
             <img
+              loading="lazy"
+              decoding="async"
               data-section="programs"
               data-content="alt2"
               class="programs--list-icon"
@@ -128,7 +120,7 @@ const ProgramsHome = () => {
             <a
               data-section="programs"
               data-content="title-link"
-              href="programs.html#programThree"
+              href="/programs/#programThree"
               title="See more"
               class="article--buttom buttom__programs"
             >
@@ -139,6 +131,8 @@ const ProgramsHome = () => {
         <li class="programs--list-item">
           <article class="programs--list-article">
             <img
+              loading="lazy"
+              decoding="async"
               data-section="programs"
               data-content="alt3"
               class="programs--list-icon"
@@ -167,7 +161,7 @@ const ProgramsHome = () => {
             <a
               data-section="programs"
               data-content="title-link"
-              href="programs.html#programFour"
+              href="/programs/#programFour"
               title="See more"
               class="article--buttom buttom__programs"
             >

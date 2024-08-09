@@ -9,7 +9,6 @@ import "../styles/home_page/programs.css";
 import "../styles/home_page/slider_alliances.css";
 import "../styles/home_page/patrons.css";
 
-
 import BlogHome from "../components/home/Blog.tsx";
 import Strategies from "../components/home/Strategies.tsx";
 import ProgramsHome from "../components/home/Programs.tsx";
@@ -128,7 +127,7 @@ import ProgramsHome from "../components/home/Programs.tsx";
   <hr />
   <!-- Progrmas -->
 
-    <ProgramsHome />
+  <ProgramsHome client:visible />
 
   <hr />
   <!-- alianazas slider -->
@@ -151,6 +150,8 @@ import ProgramsHome from "../components/home/Programs.tsx";
           >
             <picture class="alliance--list-picture">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/img/webp/alliance/SEE_webp.webp"
                 alt="Super elite entertainment"
                 class="alliance--list-img alliance--list-img__size"
@@ -170,6 +171,8 @@ import ProgramsHome from "../components/home/Programs.tsx";
           >
             <picture class="alliance--list-picture">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/img/webp/alliance/HCCGB_webp.webp"
                 alt="Hispanic Chamber of Commerce of greater Bridgeport"
                 class="alliance--list-img alliance--list-img__size"
@@ -188,6 +191,8 @@ import ProgramsHome from "../components/home/Programs.tsx";
           >
             <picture class="alliance--list-picture">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/img/webp/alliance/fundation_ed_webp.webp"
                 alt="red contra el abuso sexual"
                 class="alliance--list-img alliance--list-img__size"
@@ -207,6 +212,8 @@ import ProgramsHome from "../components/home/Programs.tsx";
           >
             <picture class="alliance--list-picture">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/img/webp/alliance/LEAD_webp.webp"
                 alt="Latinos for Educational Advocacy and Diversity"
                 class="alliance--list-img alliance--list-img__size"
@@ -225,6 +232,8 @@ import ProgramsHome from "../components/home/Programs.tsx";
           >
             <picture class="alliance--list-picture">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/img/webp/alliance/unitedhealthcare_webp.webp"
                 alt="United Healthcare Community Plan"
                 class="alliance--list-img"
@@ -243,6 +252,8 @@ import ProgramsHome from "../components/home/Programs.tsx";
           >
             <picture class="alliance--list-picture">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/img/webp/alliance/kairos_foundation_webp.webp"
                 alt="kairos fundation"
                 class="alliance--list-img"
@@ -261,6 +272,8 @@ import ProgramsHome from "../components/home/Programs.tsx";
           >
             <picture class="alliance--list-picture">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/img/webp/alliance/gala_foods_webp.webp"
                 alt="Gala foods supermarkets"
                 class="alliance--list-img"
@@ -279,6 +292,8 @@ import ProgramsHome from "../components/home/Programs.tsx";
           >
             <picture class="alliance--list-picture">
               <img
+                loading="lazy"
+                decoding="async"
                 src="/img/webp/alliance/BDK_webp.webp"
                 alt="BDK Law Group"
                 class="alliance--list-img"
@@ -392,5 +407,3 @@ import ProgramsHome from "../components/home/Programs.tsx";
     </div>
   </section>
 </Layout>
-
-<style></style>

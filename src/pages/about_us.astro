@@ -1,6 +1,7 @@
 ---
 import BannerPages from "../components/BannerPages.astro";
 import Layout from "../layouts/Layout.astro";
+import Mi_Vision from "../components/about/Mi_Vision";
 ---
 
 <Layout menuSelect={1} title="About us">
@@ -55,66 +56,8 @@ import Layout from "../layouts/Layout.astro";
   </div>
   <hr />
   <!-- Mision and vision -->
-  <div class="second-container" id="misionVision">
-    <div class="second-container--wrapper">
-      <section class="mision">
-        <picture class="mision--picture">
-          <source
-            media="(min-width: 1300px)"
-            srcset="/img/webp/about_us/Mision-webp.webp"
-          />
+  <Mi_Vision client:visible />
 
-          <img
-            data-section="mision"
-            data-content="alt"
-            class="mision--img"
-            src="/img/webp/about_us/Mision-720_webp.webp"
-            alt="group of people in a meeting room working on the mission of their project"
-          />
-        </picture>
-        <h3 data-section="mision" data-content="title" class="mision--title">
-          MISSION
-        </h3>
-        <p
-          data-section="mision"
-          data-content="paragraph"
-          class="mision--paragraph"
-        >
-          To work towards a more united Connecticut through social service
-          assistance programs, cultural celebration, and advocating for
-          educational options.
-        </p>
-      </section>
-      <section class="vision">
-        <picture class="vision--picture">
-          <source
-            media="(min-width: 1300px)"
-            srcset="/img/webp/about_us/Vision-webp.webp"
-          />
-
-          <img
-            data-section="vision"
-            data-content="alt"
-            class="vision--img"
-            src="/img/webp/about_us/Vision-720_webp.webp"
-            alt="group of people in a meeting room planning the vision of their project"
-          />
-        </picture>
-        <h3 data-section="vision" data-content="title" class="vision--title">
-          VISION
-        </h3>
-        <p
-          data-section="vision"
-          data-content="paragraph"
-          class="vision--paragraph"
-        >
-          To be the most valuable provider in community support, culture
-          integration, conservation of their folklore, and help in the
-          development of the people of our community.
-        </p>
-      </section>
-    </div>
-  </div>
   <hr />
   <!-- cards del Team -->
   <section class="team">
@@ -126,8 +69,9 @@ import Layout from "../layouts/Layout.astro";
       <li class="team-list--item">
         <article class="team-article">
           <picture class="team-article--picture">
-            
             <img
+              loading="lazy"
+              decoding="async"
               data-section="team"
               data-content="alt-general"
               class="team-article--img"
@@ -149,8 +93,9 @@ import Layout from "../layouts/Layout.astro";
       <li class="team-list--item">
         <article class="team-article">
           <picture class="team-article--picture">
-            
             <img
+              loading="lazy"
+              decoding="async"
               data-section="team"
               data-content="alt-general"
               class="team-article--img"
@@ -172,8 +117,9 @@ import Layout from "../layouts/Layout.astro";
       <li class="team-list--item">
         <article class="team-article">
           <picture class="team-article--picture">
-            
             <img
+              loading="lazy"
+              decoding="async"
               data-section="team"
               data-content="alt-general"
               class="team-article--img"
@@ -195,8 +141,9 @@ import Layout from "../layouts/Layout.astro";
       <li class="team-list--item">
         <article class="team-article">
           <picture class="team-article--picture">
-            
             <img
+              loading="lazy"
+              decoding="async"
               data-section="team"
               data-content="alt-general"
               class="team-article--img"
@@ -218,8 +165,9 @@ import Layout from "../layouts/Layout.astro";
       <li class="team-list--item">
         <article class="team-article">
           <picture class="team-article--picture">
-            
             <img
+              loading="lazy"
+              decoding="async"
               data-section="team"
               data-content="alt-general"
               class="team-article--img"
@@ -277,132 +225,6 @@ import Layout from "../layouts/Layout.astro";
 
   .aboutUs--paragraph:last-of-type {
     margin-bottom: 75px;
-  }
-
-  /* 
-mision y vision
-*/
-
-  .second-container {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    color: var(--white);
-    margin-top: 250px;
-  }
-
-  .second-container--wrapper {
-    position: absolute;
-    width: 110vw;
-    height: 100%;
-    border-radius: 50% 50% 0% 0% / 10% 10% 0% 0%;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .mision,
-  .vision {
-    height: 50%;
-    width: 100%;
-
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .mision--picture,
-  .mision--img,
-  .vision--picture,
-  .vision--img {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-  }
-
-  .mision--img,
-  .vision--img {
-    object-fit: cover;
-  }
-
-  .mision--title,
-  .vision--title {
-    position: relative;
-    font-size: var(--letterSizeBig);
-    text-align: center;
-    margin-top: 70px;
-    margin-bottom: 0;
-
-    /* transform: translateY(100px);
-    opacity: 0; */
-    transition: all 0.8s ease;
-  }
-
-  /* scroll efect title */
-
-  .second-container__scroll .mision--title,
-  .second-container__scroll .vision--title {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-
-  .mision--paragraph,
-  .vision--paragraph {
-    position: relative;
-    width: 80%;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 70px;
-    /* transform: translateY(100px);
-    opacity: 0; */
-    transition: all 0.8s ease;
-  }
-
-  /* scroll efect text */
-  .second-container__scroll .mision--paragraph,
-  .second-container__scroll .vision--paragraph {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-
-  @media (min-width: 1000px) {
-    .second-container {
-      height: 500px;
-      margin-top: 150px;
-    }
-
-    .second-container--wrapper {
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .mision,
-    .vision {
-      height: 100%;
-      width: 50%;
-    }
-
-    .mision--title,
-    .vision--title {
-      font-size: calc(var(--letterSizeTitle) * 1.4);
-
-      margin-top: 100px;
-    }
-    .mision--paragraph,
-    .vision--paragraph {
-      font-size: calc(var(--letterSizeSmall) * 1.4);
-      margin-bottom: 100px;
-      max-width: 400px;
-      height: 130px;
-    }
   }
 
   /* 

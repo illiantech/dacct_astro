@@ -77,13 +77,13 @@
 }
 
 .blog--article-wave_1::after {
-	background-image: url(img/svg/blog/blog_new_1.svg);
+	background-image: url(/img/svg/blog/blog_new_1.svg);
 }
 .blog--article-wave_2::after {
-	background-image: url(img/svg/blog/blog_new_2.svg);
+	background-image: url(/img/svg/blog/blog_new_2.svg);
 }
 .blog--article-wave_3::after {
-	background-image: url(img/svg/blog/blog_new_3.svg);
+	background-image: url(/img/svg/blog/blog_new_3.svg);
 }
 
 .blog--article-time {

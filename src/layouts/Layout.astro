@@ -249,6 +249,8 @@ const { title, menuSelect } = Astro.props;
               <!-- adaptar imagenes -->
 
               <img
+                loading="lazy"
+                decoding="async"
                 data-section="footer"
                 data-content="alt-logo"
                 class="logo--img"
@@ -264,12 +266,22 @@ const { title, menuSelect } = Astro.props;
                 target="_blank"
                 title="Facebook"
                 href="https://www.facebook.com/dacctinfo/?ref=page_internal"
-                ><img src="/icons/facebook.svg" alt="Facebook" /></a
+                ><img
+                  loading="lazy"
+                  decoding="async"
+                  src="/icons/facebook.svg"
+                  alt="Facebook"
+                /></a
               >
             </li>
             <li class="contact--item">
-              <a target="_blank" title="Telegram" href=""
-                ><img src="/icons/telegram.svg" alt="Telegram" /></a
+              <a target="_blank" title="Telegram" href="/"
+                ><img
+                  loading="lazy"
+                  decoding="async"
+                  src="/icons/telegram.svg"
+                  alt="Telegram"
+                /></a
               >
             </li>
             <li class="contact--item">
@@ -277,7 +289,12 @@ const { title, menuSelect } = Astro.props;
                 target="_blank"
                 title="Instagram"
                 href="https://www.instagram.com/dominicanamericancoalitionofct/"
-                ><img src="/icons/instagram.svg" alt="Instagram" /></a
+                ><img
+                  loading="lazy"
+                  decoding="async"
+                  src="/icons/instagram.svg"
+                  alt="Instagram"
+                /></a
               >
             </li>
           </ul>

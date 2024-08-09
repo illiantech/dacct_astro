@@ -1,30 +1,17 @@
-import { useEffect, useRef, useState } from "preact/hooks";
-// import { useIntersectionObserver } from "../InterObsProvider";
+import { useRef } from "preact/hooks";
+import useIntersectingElmts from "../../hooks/useIntersectingElmts";
 
 const BlogHome = () => {
   const ref = useRef<HTMLElement>(null);
-  // const [intersecting, setIntersecting] = useState<boolean>(false);
-  // const { observe, unobserve, entries } = useIntersectionObserver();
-
-  // useEffect(() => {
-  //   if (ref.current) observe(ref.current);
-
-  //   return () => {
-  //     if (ref.current) unobserve(ref.current);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   if (entries.length > 0) {
-  //     const entry = entries.find((entry) => entry.target === ref.current);
-  //     if (entry) setIntersecting(entry.isIntersecting);
-  //   }
-  // }, [entries]);
+  const { intersecting } = useIntersectingElmts({
+    ref,
+    options: { threshold: 0.3 },
+  });
 
   return (
     <section
       ref={ref}
-      // class={intersecting ? "blog blog__scroll" : "blog"}
+      class={intersecting ? "blog blog__scroll" : "blog"}
       id="blogHome"
     >
       <h2 data-section="blog" data-content="title" class="blog--title">
@@ -36,7 +23,13 @@ const BlogHome = () => {
             <picture class="blog--article-picture blog--article-wave_1">
               <source media="(min-width: 1300px)" srcset="" />
               <source srcset="" />
-              <img src="" alt="" class="blog--article-img" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src=""
+                alt=""
+                class="blog--article-img"
+              />
             </picture>
             <time class="blog--article-time" datetime=""></time>
 
@@ -60,7 +53,13 @@ const BlogHome = () => {
             <picture class="blog--article-picture blog--article-wave_2">
               <source media="(min-width: 1300px)" srcset="" />
               <source srcset="" />
-              <img src="" alt="" class="blog--article-img" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src=""
+                alt=""
+                class="blog--article-img"
+              />
             </picture>
             <time class="blog--article-time" datetime=""></time>
             <h3 class="blog--article-title"></h3>
@@ -83,7 +82,13 @@ const BlogHome = () => {
             <picture class="blog--article-picture blog--article-wave_3">
               <source media="(min-width: 1300px)" srcset="" />
               <source srcset="" />
-              <img src="" alt="" class="blog--article-img" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src=""
+                alt=""
+                class="blog--article-img"
+              />
             </picture>
             <time class="blog--article-time" datetime=""></time>
             <h3 class="blog--article-title"></h3>
