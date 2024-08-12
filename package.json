@@ -11,19 +11,12 @@
     "eslint": "eslint --fix src/**/*.{js,astro}"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.1",
-    "@astrojs/preact": "^3.5.1",
-    "@types/dom-view-transitions": "^1.0.5",
-    "astro": "^4.12.3",
-    "preact": "^10.23.1",
-    "typescript": "^5.5.4",
-    "zustand": "^4.5.4"
+    "@astrojs/check": "0.9.1",
+    "@astrojs/preact": "3.5.1",
+    "@types/dom-view-transitions": "1.0.5",
+    "astro": "4.12.3",
+    "preact": "10.23.1",
+    "typescript": "5.5.4"
   },
-  "devDependencies": {
-    "@typescript-eslint/parser": "^8.0.1",
-    "eslint": "^9.8.0",
-    "eslint-plugin-astro": "^1.2.3",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1"
-  }
+  "devDependencies": {}
 }
