@@ -30,7 +30,8 @@ const CoAllianceItem = () => {
           class="programs-list--icon"
           src="/img/svg/programs/co-alianza.svg"
           alt="Alliance between people with their hands on their hearts"
-        />
+        /> 
+        
         <picture class="programs-list--picture">
           <img
             loading="lazy"
