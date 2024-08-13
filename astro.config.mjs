@@ -5,4 +5,6 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   integrations: [preact()],
+  outDir: "./docs",
+  base: "/dacct_astro/",
 });

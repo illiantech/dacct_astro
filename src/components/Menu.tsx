@@ -163,7 +163,7 @@ const Menu = ({ menuSelect }: Props) => {
                       data-lang="es"
                       data-section="header"
                       data-content="alt-es"
-                      src="/img/webp/republica-dominicana.webp"
+                      src="/icons/spain.svg"
                       alt="Flag of The Dominican Republic"
                     />
                   </li>
@@ -183,7 +183,7 @@ const Menu = ({ menuSelect }: Props) => {
                       data-lang="en"
                       data-section="header"
                       data-content="alt-en"
-                      src="/img/webp/estados-unidos.webp"
+                      src="/icons/usa.svg"
                       alt="Flag of The United States"
                     />
                   </li>

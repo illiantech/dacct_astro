@@ -1,24 +1,24 @@
-import { useEffect, useRef } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 
 interface Props {
-    intersecting:boolean;
-    refObserver: IntersectionObserver | null
+  intersecting: boolean;
+  refObserver: IntersectionObserver | null;
 }
 
-const useVisibleOnce= ({intersecting, refObserver}:Props)=>{
-    const refVisibleOnce = useRef<boolean>(false);
+const useVisibleOnce = ({ intersecting, refObserver }: Props) => {
+const [visibleOnce, setVisibleOnce]= useState<boolean>(false)
 
+  useEffect(() => {
     if (intersecting) {
-        refVisibleOnce.current = intersecting;
-    
-        useEffect(() => {
-          if (refObserver) refObserver.disconnect();
-          console.log("disconnet");
-        }, [refVisibleOnce]);
-      }
-    
-      return {refVisibleOnce:refVisibleOnce.current}
-}
+      setVisibleOnce( intersecting);
 
+      if (refObserver) refObserver.disconnect();
+      console.log("disconnet");
+    }
+  }, [intersecting]);
 
-export default useVisibleOnce
+ 
+  return { visibleOnce };
+};
+
+export default useVisibleOnce;

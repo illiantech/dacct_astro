@@ -10,13 +10,13 @@ const CodacItem = () => {
     options: { threshold: 0.2 },
   });
 
-  const { refVisibleOnce } = useVisibleOnce({ intersecting, refObserver });
+  const { visibleOnce } = useVisibleOnce({ intersecting, refObserver });
 
   return (
     <li
       ref={ref}
       class={
-        refVisibleOnce
+        visibleOnce
           ? "programs-list--item programs-list--item-pair  programs-list--item__scroll"
           : "programs-list--item programs-list--item-pair "
       }

@@ -12,12 +12,32 @@ import BannerPages from "../components/BannerPages.astro";
   <form class="form-block" id="form">
     <div class="form-block--group-information">
       <h3 data-section="info-form" data-content="title">Information</h3>
-      <p><i class="fa-solid fa-phone"></i>+1 203-913-5370</p>
       <p>
-        <i class="fa-solid fa-location-dot"></i>853 Fairfield Ave 2nd Bridgeport
-        CT 06605
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/icons/phone.svg"
+          alt="phone-icon"
+        />+1 203-913-5370
       </p>
-      <p><i class="fa-solid fa-envelope"></i>contact@dacct.org</p>
+      <p>
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/icons/location.svg"
+          alt="location-icon"
+        />
+        853 Fairfield Ave 2nd Bridgeport CT 06605
+      </p>
+
+      <p>
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/icons/email.svg"
+          alt="mail-icon"
+        />contact@dacct.org
+      </p>
     </div>
     <div class="form-block--group-inputs">
       <label data-section="form" data-content="name" for="name"
@@ -92,9 +112,6 @@ import BannerPages from "../components/BannerPages.astro";
       </p>
     </div>
   </form>
-
-  <!-- fin contacto -->
-
   <div class="container-paragraph">
     <div class="container-paragraph--text">
       <p data-section="info-form" data-content="paragraph">
@@ -157,16 +174,18 @@ import BannerPages from "../components/BannerPages.astro";
   }
 
   .form-block--group-information p {
-    width: 80%;
+    width: 85%;
     max-width: 350px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
+    display: flex;
+    align-items: center;
   }
 
-  .form-block--group-information p i {
+  .form-block--group-information p img {
     margin-right: 10px;
+    width: 25px;
   }
 
   /* form-block group-form ----- block */
@@ -337,12 +356,12 @@ import BannerPages from "../components/BannerPages.astro";
 
     .form-block--group-information p {
       width: 100%;
-      font-size: var(--letterSizeMedium);
+      font-size: calc(var(--letterSizeMedium) * 0.8);
       margin-bottom: 60px;
     }
 
-    .form-block--group-information p i {
-      font-size: var(--letterSizeMedium);
+    .form-block--group-information p img {
+      width: 35px;
     }
 
     /* form-block group-form ----- block */

@@ -16,7 +16,7 @@
 	position: relative;
 }
 /* No se hizo por img para facilitar la iteracion por JS */
-.slider--picture0,
+
 .slider--picture1,
 .slider--picture2,
 .slider--picture3,
@@ -24,27 +24,47 @@
 	position: absolute;
 	height: 100vh;
 	width: 100%;
+	animation: slider 20s ease infinite;
+	z-index: -50;
+	opacity: 0;
 }
 
-.slider--picture0 {
-	z-index: -200;
-}
 
-.slider--picture1 {
-	z-index: -400;
-}
+
 
 .slider--picture2 {
-	z-index: -600;
-}
 
+	animation-delay: 5s;
+
+
+}
 .slider--picture3 {
-	z-index: -800;
+
+	animation-delay: 10s;
 }
 
 .slider--picture4 {
-	z-index: -1000;
+
+	animation-delay:15s;
 }
+
+@keyframes slider {
+	0% {
+	   opacity: 0;
+   }
+   6% {
+	   opacity: 1;
+   }
+   24% {
+	   opacity: 1;
+   }
+   30% {
+	   opacity: 0;
+   }
+   100% {
+	   opacity: 0;
+   }
+   }
 
 .slider--img0,
 .slider--img1,
