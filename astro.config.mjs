@@ -6,5 +6,5 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   integrations: [preact()],
   outDir: "./docs",
-  base:'/dacct_astro'
+  base: "./dacct_astro",
 });
