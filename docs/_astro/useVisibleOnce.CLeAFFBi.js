@@ -1,1 +1,0 @@
-import{h as i,y as n}from"./hooks.module.BIP-7rWD.js";const t=({intersecting:o,refObserver:s})=>{const[c,e]=i(!1);return n(()=>{o&&(e(o),s&&s.disconnect(),console.log("disconnet"))},[o]),{visibleOnce:c}};export{t as u};
