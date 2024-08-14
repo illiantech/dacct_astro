@@ -22,7 +22,14 @@
     width: 95%;
     height: 725px;
     position: relative;
+   
   }
+
+  .programs-list--item-last {
+margin-bottom: 150px;
+   
+  }
+
 
   .programs-list--item-pair {
     transform: scalex(-1);

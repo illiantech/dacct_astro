@@ -20,7 +20,6 @@ const Menu = ({ menuSelect }: Props) => {
         <a title="Logo" href="/" class="logo">
           <picture>
             <img
-              decoding="async"
               class="logo--img"
               src="/img/webp/logo/logo_name.webp"
               alt="Logo with flags of The Dominican Republic and The United States where they make a social contribution in Connecticut"
@@ -65,7 +64,7 @@ const Menu = ({ menuSelect }: Props) => {
                 title="Home"
                 href="/"
               >
-                Home
+                <p>Home</p>
               </a>
             </li>
             <li
@@ -81,7 +80,7 @@ const Menu = ({ menuSelect }: Props) => {
                 title="About us"
                 href="/about_us/"
               >
-                About us
+                <p>About us</p>
               </a>
             </li>
             <li
@@ -97,7 +96,7 @@ const Menu = ({ menuSelect }: Props) => {
                 title="Programs"
                 href="/programs/"
               >
-                Programs
+                <p>Programs</p>
               </a>
             </li>
             <li
@@ -108,7 +107,7 @@ const Menu = ({ menuSelect }: Props) => {
               }
             >
               <a title="Blog" href="/blog/">
-                Blog
+                <p>Blog</p>
               </a>
             </li>
 
@@ -125,7 +124,7 @@ const Menu = ({ menuSelect }: Props) => {
                 title="Contact us"
                 href="/contact_us/"
               >
-                Contact us
+                <p>Contact us</p>
               </a>
             </li>
             <li class="list--item donate-buttom">
@@ -158,8 +157,6 @@ const Menu = ({ menuSelect }: Props) => {
                       ES
                     </span>
                     <img
-                      loading="lazy"
-                      decoding="async"
                       data-lang="es"
                       data-section="header"
                       data-content="alt-es"
@@ -178,8 +175,6 @@ const Menu = ({ menuSelect }: Props) => {
                       EN
                     </span>
                     <img
-                      loading="lazy"
-                      decoding="async"
                       data-lang="en"
                       data-section="header"
                       data-content="alt-en"

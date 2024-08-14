@@ -15,11 +15,10 @@ const CoAllianceItem = () => {
       ref={ref}
       class={
         visibleOnce
-          ? "programs-list--item programs-list--item-pair programs-list--item__scroll"
-          : "programs-list--item programs-list--item-pair"
+          ? "programs-list--item programs-list--item-last programs-list--item-pair programs-list--item__scroll"
+          : "programs-list--item programs-list--item-last programs-list--item-pair"
       }
     >
-      
       <div id="programFour"></div>
       <article class="programs-list--article">
         <img
@@ -30,8 +29,8 @@ const CoAllianceItem = () => {
           class="programs-list--icon"
           src="/img/svg/programs/co-alianza.svg"
           alt="Alliance between people with their hands on their hearts"
-        /> 
-        
+        />
+
         <picture class="programs-list--picture">
           <img
             loading="lazy"

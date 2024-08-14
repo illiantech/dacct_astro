@@ -218,9 +218,6 @@ const { title, menuSelect } = Astro.props;
     box-sizing: border-box;
 
     /* in firefox */
-
-    scrollbar-width: thin;
-    scrollbar-color: var(--colorSecundario) var(--white);
   }
 
   /* scroll */
@@ -287,6 +284,31 @@ const { title, menuSelect } = Astro.props;
     to {
       opacity: 1;
       transform: translateY(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      view-transition-name: none !important;
+      view-transition: none !important;
+    }
+
+    ::view-transition,
+    ::view-transition-new(titleBanner) {
+      animation: none !important;
+    }
+
+    button,
+    img,
+    li,
+    div,
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+      transition: none !important;
+      animation: none !important;
     }
   }
 

@@ -8,10 +8,10 @@ const SliderAlliance = () => {
       enableAutoplay: true,
       autoplayInterval: 3000,
       stopAutoplayOnInteraction: true,
-      transitionDuration: 600,
+      transitionDuration: 400,
       draggable: true,
     },
-    "(min-width: 1000px)": {
+    "(min-width: 1300px)": {
       slidesToShow: 3,
     },
   });

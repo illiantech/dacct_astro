@@ -7,10 +7,26 @@
 	margin-bottom: 50px;
 }
 
+.blaze-slider {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+}
+
+.blaze-container {
+	
+	width: 100%;
+	max-width: 1500px;
+
+}
+
 .alliance--list-container {
 	--sizeAlliance: 400px;
 	height: var(--sizeAlliance);
 	position: relative;
+
+
 }
 
 
@@ -58,7 +74,7 @@ align-items: center;
 
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1300px) {
 	
 
 

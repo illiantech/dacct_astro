@@ -167,7 +167,11 @@
 	height: 30px;
 }
 
-.list--item > a:hover,	.list--item__select > a {
+.list--item > a > p{
+	margin: 0;
+}
+
+.list--item > a:hover >p,	.list--item__select > a > p{
 	border-bottom: 3px solid var(--colorSecundario);
 }
 
@@ -299,7 +303,7 @@
 
 	.nav {
 		height: 100px;
-		width: 70%;
+		width: 65%;
 		box-shadow: none;
 		background-color: transparent;
 		position: absolute;
@@ -331,8 +335,16 @@
 
 		width: auto;
 		margin-left: 0px;
-		height: 22px;
+		height:100%;
 		font-size: var(--letterSizeSmall);
+		display: flex;
+		align-items: center;
+	
+	}
+
+	.list--item > a >p{
+	
+height: 1.5rem;
 	
 	}
 
@@ -355,8 +367,8 @@
 	/* Idioma menu */
 
 	.list--item:last-child {
-		right: -250px;
-		top: 50%;
+		left: 135%;
+        top: 40%;
 	}
 
 	.lang {

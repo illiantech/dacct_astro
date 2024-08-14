@@ -47,7 +47,7 @@ const ProgramsHome = () => {
               data-section="programs"
               data-content="title-link"
               href="/programs/#programOne"
-              title="See more"
+              title="Information program"
               class="article--buttom buttom__programs"
             >
               See more
@@ -80,7 +80,7 @@ const ProgramsHome = () => {
               data-section="programs"
               data-content="title-link"
               href="/programs/#programTwo"
-              title="See more"
+              title="Information program"
               class="article--buttom buttom__programs"
             >
               See more
@@ -121,7 +121,7 @@ const ProgramsHome = () => {
               data-section="programs"
               data-content="title-link"
               href="/programs/#programThree"
-              title="See more"
+              title="Information program"
               class="article--buttom buttom__programs"
             >
               See more
@@ -162,7 +162,7 @@ const ProgramsHome = () => {
               data-section="programs"
               data-content="title-link"
               href="/programs/#programFour"
-              title="See more"
+              title="Information program"
               class="article--buttom buttom__programs"
             >
               See more
