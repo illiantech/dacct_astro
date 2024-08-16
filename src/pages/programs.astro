@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import MenuSelect from "../enums";
 import BannerPages from "../components/BannerPages.astro";
 import "../styles/programs/programs.css";
 import ChocolateItem from "../components/programs/Chocolate.tsx";
@@ -8,7 +10,7 @@ import FinancesItem from "../components/programs/Finances.tsx";
 import CoAllianceItem from "../components/programs/CoAlliance.tsx";
 ---
 
-<Layout title="Programs" menuSelect={2}>
+<Layout title="Programs" menuSelect={MenuSelect.programs}>
   <BannerPages
     upperTitle="Programs"
     wave="/img/svg/programs/wave_programs.svg"
@@ -16,7 +18,7 @@ import CoAllianceItem from "../components/programs/CoAlliance.tsx";
   <hr />
   <!-- PROGRAMAS -->
 
-  <ul class="programs-list" id="programs">
+  <ul class="programs-list">
     <ChocolateItem client:visible />
 
     <CodacItem client:visible />

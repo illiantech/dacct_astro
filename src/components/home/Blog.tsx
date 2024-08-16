@@ -12,12 +12,12 @@ const BlogHome = () => {
     <section
       ref={ref}
       class={intersecting ? "blog blog__scroll" : "blog"}
-      id="blogHome"
+     
     >
-      <h2 data-section="blog" data-content="title" class="blog--title">
+      <h2 class="blog--title">
         Don't Miss Out! Check Our Blog
       </h2>
-      <ul data-elementsList="blogs" id="blogList" class="blog--list">
+      <ul   class="blog--list">
         <li class="blog--list-item">
           <article class="blog--article">
             <picture class="blog--article-picture blog--article-wave_1">
@@ -38,9 +38,7 @@ const BlogHome = () => {
             <p class="blog--article-paragraph"></p>
 
             <span
-              data-open="0"
-              data-section="blog"
-              data-content="title-link"
+          
               title="See more"
               class="article--buttom"
             >
@@ -67,9 +65,7 @@ const BlogHome = () => {
             <p class="blog--article-paragraph"></p>
 
             <span
-              data-open="1"
-              data-section="blog"
-              data-content="title-link"
+        
               title="See more"
               class="article--buttom"
             >
@@ -96,9 +92,7 @@ const BlogHome = () => {
             <p class="blog--article-paragraph"></p>
 
             <span
-              data-open="2"
-              data-section="blog"
-              data-content="title-link"
+          
               title="See more"
               class="article--buttom"
             >

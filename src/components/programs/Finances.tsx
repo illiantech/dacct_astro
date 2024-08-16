@@ -25,8 +25,7 @@ const FinancesItem = () => {
         <img
           loading="lazy"
           decoding="async"
-          data-section="programs2"
-          data-content="alt-svg"
+  
           class="programs-list--icon"
           src="/img/svg/programs/finanzas.svg"
           alt="Responsible finances to learn to manage your money better"
@@ -35,23 +34,21 @@ const FinancesItem = () => {
           <img
             loading="lazy"
             decoding="async"
-            data-section="programs2"
-            data-content="alt"
+     
             class="programs-list--img3"
             src="/img/webp/programs/Mis-finanzas-720_webp.webp"
             alt="financial analysis to learn to better manage personal finances en small businesses"
           />
         </picture>
         <h3
-          data-section="programs2"
-          data-content="title"
+    
           class="programs-list--title"
         >
           My Finances
         </h3>
         <div
-          data-section="programs2"
-          data-content="paragraph"
+   
+   
           class="programs-list--paragraph-container"
         >
           <p class="programs-list--paragraph">

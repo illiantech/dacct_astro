@@ -1,7 +1,9 @@
-export const enum MenuSelect {
+const enum MenuSelect {
   home,
   aboutUs,
   programs,
   blog,
   contactUs,
 }
+
+export default  MenuSelect

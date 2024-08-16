@@ -28,7 +28,7 @@ const ChocolateItem = () => {
         <img
           loading="lazy"
           decoding="async"
-          data-section="programs0"
+    
           class="programs-list--icon"
           src="/img/svg/programs/chocolate_yola.svg"
           alt="Two hands joined together"
@@ -37,8 +37,7 @@ const ChocolateItem = () => {
           <img
             loading="lazy"
             decoding="async"
-            data-section="programs0"
-            data-content="alt"
+          
             class="programs-list--img"
             src="/img/webp/programs/Chocolate-con-yola-720_webp.webp"
             alt="Group of young people and elderly people sharing and learning values for healthy coexistance to reinforce family bonds"
@@ -47,8 +46,7 @@ const ChocolateItem = () => {
         <h3 class="programs-list--title">Chocolate con Yola</h3>
         <div class="programs-list--paragraph-container">
           <p
-            data-section="programs0"
-            data-content="paragraph"
+     
             class="programs-list--paragraph"
           >
             This program was born from the collaboration of United Healthcare,

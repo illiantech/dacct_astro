@@ -3,7 +3,7 @@ import "../styles/Normalize.css";
 import Menu from "../components/Menu.tsx";
 import "../styles/footer.css";
 
-import { MenuSelect } from "../enums.ts";
+import type MenuSelect from "../enums.ts";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -126,7 +126,7 @@ const { title, menuSelect } = Astro.props;
       <!-- Menu -->
       <Menu client:load menuSelect={menuSelect} />
     </header>
-    <main role="main" id="main">
+    <main role="main" >
       <!-- Slider automatico -->
 
       <slot />
@@ -143,8 +143,6 @@ const { title, menuSelect } = Astro.props;
               <img
                 loading="lazy"
                 decoding="async"
-                data-section="footer"
-                data-content="alt-logo"
                 class="logo--img"
                 src="/img/webp/logo/logo_name.webp"
                 alt="Logo de banderas de republica dominicana y estados unidos donde se trabaja en una contribucion social en Connecticut"
@@ -197,11 +195,7 @@ const { title, menuSelect } = Astro.props;
               class="autor">ILLIANTECH &ensp; 2022 - 2024</a
             >
           </div>
-          <p
-            data-section="footer"
-            data-content="paragraph"
-            class="footer--info"
-          >
+          <p class="footer--info">
             The Dominican-American Coalition is a non profit organization with
             the code 501 C 3.
           </p>

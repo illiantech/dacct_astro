@@ -26,8 +26,7 @@ const CodacItem = () => {
         <img
           loading="lazy"
           decoding="async"
-          data-section="programs1"
-          data-content="alt-svg"
+
           class="programs-list--icon"
           src="/img/svg/programs/codac.svg"
           alt="First aid kit with medicines"
@@ -36,8 +35,7 @@ const CodacItem = () => {
           <img
             loading="lazy"
             decoding="async"
-            data-section="programs1"
-            data-content="alt"
+     
             class="programs-list--img2"
             src="/img/webp/programs/CODAC-720_webp.webp"
             alt="people in a storage managing the food for the social program CODAC"
@@ -46,8 +44,7 @@ const CodacItem = () => {
         <h3 class="programs-list--title">CODAC</h3>
         <div class="programs-list--paragraph-container">
           <p
-            data-section="programs1"
-            data-content="paragraph"
+     
             class="programs-list--paragraph"
           >
             Our social assistance program with which we benefit dozens of

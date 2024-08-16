@@ -24,8 +24,7 @@ const CoAllianceItem = () => {
         <img
           loading="lazy"
           decoding="async"
-          data-section="programs3"
-          data-content="alt-svg"
+     
           class="programs-list--icon"
           src="/img/svg/programs/co-alianza.svg"
           alt="Alliance between people with their hands on their hearts"
@@ -35,24 +34,21 @@ const CoAllianceItem = () => {
           <img
             loading="lazy"
             decoding="async"
-            data-section="programs3"
-            data-content="alt"
+       
             class="programs-list--img4"
             src="/img/webp/programs/Co-Alianza-720_webp.webp"
             alt="people forming an alliance with the purpose of offering value to society"
           />
         </picture>
         <h3
-          data-section="programs3"
-          data-content="title"
+   
           class="programs-list--title"
         >
           Co Alliance
         </h3>
         <div class="programs-list--paragraph-container">
           <p
-            data-section="programs3"
-            data-content="paragraph"
+      
             class="programs-list--paragraph"
           >
             Our Co-Alliance program seeks to establish partnerships with social

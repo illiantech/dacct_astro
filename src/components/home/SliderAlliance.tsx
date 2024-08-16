@@ -18,9 +18,7 @@ const SliderAlliance = () => {
 
   return (
     <section class="alliance">
-      <h2 data-section="alliance" data-content="title" class="alliance--title">
-        Allies
-      </h2>
+      <h2 class="alliance--title">Allies</h2>
 
       <div class="blaze-slider" ref={elRef}>
         <div class="blaze-container">
@@ -28,8 +26,6 @@ const SliderAlliance = () => {
             <ul class=" blaze-track alliance--list">
               <li class="alliance--list-item">
                 <a
-                  data-section="alliance"
-                  data-content="title-link"
                   title="See more"
                   target="_blank"
                   href="https://www.youtube.com/c/SUPERELITEENTERTAINMENT"
@@ -49,8 +45,6 @@ const SliderAlliance = () => {
 
               <li class="alliance--list-item">
                 <a
-                  data-section="alliance"
-                  data-content="title-link"
                   title="See more"
                   target="_blank"
                   href="https://hccgb.org/"
@@ -69,8 +63,6 @@ const SliderAlliance = () => {
               </li>
               <li class="alliance--list-item">
                 <a
-                  data-section="alliance"
-                  data-content="title-link"
                   title="See more"
                   target="_blank"
                   href="https://redcontraelabusosexual.org/"
@@ -90,8 +82,6 @@ const SliderAlliance = () => {
 
               <li class="alliance--list-item">
                 <a
-                  data-section="alliance"
-                  data-content="title-link"
                   title="See more"
                   target="_blank"
                   href="https://ctlead.org/"
@@ -110,8 +100,6 @@ const SliderAlliance = () => {
               </li>
               <li class="alliance--list-item">
                 <a
-                  data-section="alliance"
-                  data-content="title-link"
                   title="See more"
                   target="_blank"
                   href="https://es.uhccommunityplan.com/"
@@ -130,8 +118,6 @@ const SliderAlliance = () => {
               </li>
               <li class="alliance--list-item">
                 <a
-                  data-section="alliance"
-                  data-content="title-link"
                   title="See more"
                   target="_blank"
                   href="https://kairosfundation.org/"
@@ -150,8 +136,6 @@ const SliderAlliance = () => {
               </li>
               <li class="alliance--list-item">
                 <a
-                  data-section="alliance"
-                  data-content="title-link"
                   title="See more"
                   target="_blank"
                   href="https://galasupermarkets.com/#"
@@ -170,8 +154,6 @@ const SliderAlliance = () => {
               </li>
               <li class="alliance--list-item">
                 <a
-                  data-section="alliance"
-                  data-content="title-link"
                   title="See more"
                   target="_blank"
                   href="http://www.bdklawgroup.com/"

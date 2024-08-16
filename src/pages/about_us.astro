@@ -1,10 +1,11 @@
 ---
+import MenuSelect from "../enums";
 import BannerPages from "../components/BannerPages.astro";
 import Layout from "../layouts/Layout.astro";
 import Mi_Vision from "../components/about/Mi_Vision";
 ---
 
-<Layout menuSelect={1} title="About us">
+<Layout menuSelect={MenuSelect.aboutUs} title="About us">
   <BannerPages
     wave="/img/svg/conocenos/wave_conocenos.svg"
     upperTitle="ABOUT US"
@@ -12,14 +13,10 @@ import Mi_Vision from "../components/about/Mi_Vision";
 
   <div class="first-container">
     <section class="aboutUs">
-      <h3 data-section="what_is" data-content="title" class="aboutUs--title">
+      <h3 class="aboutUs--title">
         What does The Dominican American Coalition of Connecticut do?
       </h3>
-      <p
-        data-section="what_is"
-        data-content="paragraph0"
-        class="aboutUs--paragraph"
-      >
+      <p class="aboutUs--paragraph">
         Through the execution of human development programs, The
         Dominican-American Coalition of Connecticut works for the benefit of the
         inhabitants of the State of Connecticut by applying models of social
@@ -27,11 +24,7 @@ import Mi_Vision from "../components/about/Mi_Vision";
         “valor-arte” method, which means give “VALUE” to people through the
         “ARTS”.
       </p>
-      <p
-        data-section="what_is"
-        data-content="paragraph1"
-        class="aboutUs--paragraph"
-      >
+      <p class="aboutUs--paragraph">
         In virtue of the above, it develops its social work through the arts
         focused on education, history, culture, social welfare,
         entrepreneurship, and productivity. The work is done hand-in-hand with
@@ -39,14 +32,10 @@ import Mi_Vision from "../components/about/Mi_Vision";
       </p>
     </section>
     <section class="objects">
-      <h3 data-section="objects" data-content="title" class="objects--title">
+      <h3 class="objects--title">
         What is the specific objective of the organization?
       </h3>
-      <p
-        data-section="objects"
-        data-content="paragraph"
-        class="objetcs--paragraph"
-      >
+      <p class="objetcs--paragraph">
         To work on issues that affect the development of Connecticut residents
         without discrimination in the areas of education and at the same time in
         activities that promote the cultural roots, diversity, and history of
@@ -61,9 +50,7 @@ import Mi_Vision from "../components/about/Mi_Vision";
   <hr />
   <!-- cards del Team -->
   <section class="team">
-    <h3 data-section="team" data-content="title" class="team--title">
-      About us
-    </h3>
+    <h3 class="team--title">About us</h3>
 
     <ul class="team-list">
       <li class="team-list--item">
@@ -72,19 +59,13 @@ import Mi_Vision from "../components/about/Mi_Vision";
             <img
               loading="lazy"
               decoding="async"
-              data-section="team"
-              data-content="alt-general"
               class="team-article--img"
               src="/img/webp/team-example.webp"
               alt="team work"
             />
           </picture>
           <h4 class="team-article--title">Ramona Santelises</h4>
-          <p
-            data-section="team"
-            data-content="hierarchy0"
-            class="team-article--paragraph"
-          >
+          <p class="team-article--paragraph">
             <em>President</em>
           </p>
           <p class="team-article--mail">rsantelises@dacct.org</p>
@@ -96,19 +77,13 @@ import Mi_Vision from "../components/about/Mi_Vision";
             <img
               loading="lazy"
               decoding="async"
-              data-section="team"
-              data-content="alt-general"
               class="team-article--img"
               src="/img/webp/team-example.webp"
               alt="team work"
             />
           </picture>
           <h4 class="team-article--title">Jonatan Soto</h4>
-          <p
-            data-section="team"
-            data-content="hierarchy1"
-            class="team-article--paragraph"
-          >
+          <p class="team-article--paragraph">
             <em>Member of the board</em>
           </p>
           <p class="team-article--mail">jonatansoto@dacct.org</p>
@@ -120,19 +95,13 @@ import Mi_Vision from "../components/about/Mi_Vision";
             <img
               loading="lazy"
               decoding="async"
-              data-section="team"
-              data-content="alt-general"
               class="team-article--img"
               src="/img/webp/team-example.webp"
               alt="team work"
             />
           </picture>
           <h4 class="team-article--title">Jacquelina Santos</h4>
-          <p
-            data-section="team"
-            data-content="hierarchy2"
-            class="team-article--paragraph"
-          >
+          <p class="team-article--paragraph">
             <em>Treasurer</em>
           </p>
           <p class="team-article--mail">JacquelinaSantos@dacct.org</p>
@@ -144,19 +113,13 @@ import Mi_Vision from "../components/about/Mi_Vision";
             <img
               loading="lazy"
               decoding="async"
-              data-section="team"
-              data-content="alt-general"
               class="team-article--img"
               src="/img/webp/team-example.webp"
               alt="team work"
             />
           </picture>
           <h4 class="team-article--title">Belkis Almonte</h4>
-          <p
-            data-section="team"
-            data-content="hierarchy3"
-            class="team-article--paragraph"
-          >
+          <p class="team-article--paragraph">
             <em>Executive director</em>
             <p class="team-article--mail">BelkisAlmonte@dacct.org</p>
           </p>
@@ -168,19 +131,13 @@ import Mi_Vision from "../components/about/Mi_Vision";
             <img
               loading="lazy"
               decoding="async"
-              data-section="team"
-              data-content="alt-general"
               class="team-article--img"
               src="/img/webp/team-example.webp"
               alt="team work"
             />
           </picture>
           <h4 class="team-article--title">Lucy Billini-Artis</h4>
-          <p
-            data-section="team"
-            data-content="hierarchy4"
-            class="team-article--paragraph"
-          >
+          <p class="team-article--paragraph">
             <em>Administrative secretary</em>
           </p>
           <p class="team-article--mail">Lucybillini-artis@dacct.org</p>

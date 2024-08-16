@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { MenuSelect } from "../enums.ts";
+import MenuSelect from "../enums.ts";
 
 import "../styles/menu.css";
 
@@ -23,34 +23,28 @@ const Menu = ({ menuSelect }: Props) => {
               class="logo--img"
               src="/img/webp/logo/logo_name.webp"
               alt="Logo with flags of The Dominican Republic and The United States where they make a social contribution in Connecticut"
-              data-section="header"
-              data-content="alt-logo"
             />
           </picture>
         </a>
         <div
-          data-section="header"
-          data-content="title-active-menu"
           title="Enable menu"
           class="menu-active"
-          id="menuActive"
+        
           onClick={handleMenu}
         ></div>
 
         <nav
           role="navigation"
           class={active ? "nav nav__active" : "nav"}
-          id="menu-nav"
+       
         >
           <div
-            data-section="header"
-            data-content="title-desactive-menu"
             title="Disable menu"
             class="menu-desactive"
-            id="menuDesactive"
+         
             onClick={handleMenu}
           ></div>
-          <ul class="list" id="list">
+          <ul class="list" >
             <li
               class={
                 menuSelect === MenuSelect.home
@@ -58,12 +52,7 @@ const Menu = ({ menuSelect }: Props) => {
                   : "list--item"
               }
             >
-              <a
-                data-section="header"
-                data-content="title-nav-home"
-                title="Home"
-                href="/"
-              >
+              <a title="Home" href="/">
                 <p>Home</p>
               </a>
             </li>
@@ -74,12 +63,7 @@ const Menu = ({ menuSelect }: Props) => {
                   : "list--item"
               }
             >
-              <a
-                data-section="header"
-                data-content="title-nav-about_us"
-                title="About us"
-                href="/about_us/"
-              >
+              <a title="About us" href="/about_us/">
                 <p>About us</p>
               </a>
             </li>
@@ -90,12 +74,7 @@ const Menu = ({ menuSelect }: Props) => {
                   : "list--item"
               }
             >
-              <a
-                data-section="header"
-                data-content="title-nav-programs"
-                title="Programs"
-                href="/programs/"
-              >
+              <a title="Programs" href="/programs/">
                 <p>Programs</p>
               </a>
             </li>
@@ -118,19 +97,12 @@ const Menu = ({ menuSelect }: Props) => {
                   : "list--item"
               }
             >
-              <a
-                data-section="header"
-                data-content="title-nav-contacts"
-                title="Contact us"
-                href="/contact_us/"
-              >
+              <a title="Contact us" href="/contact_us/">
                 <p>Contact us</p>
               </a>
             </li>
             <li class="list--item donate-buttom">
               <a
-                data-section="header"
-                data-content="title-nav-donate"
                 title="Donate"
                 href="https://www.paypal.com/donate/?hosted_button_id=KZMTUG9N6XT7W"
                 target="_blank"
@@ -139,48 +111,21 @@ const Menu = ({ menuSelect }: Props) => {
               </a>
             </li>
             <li class="list--item">
-              <div id="lang" class="lang lang__hover">
-                <em data-section="header" data-content="nav-lang">
-                  language
-                </em>
+              <div  class="lang lang__hover">
+                <em>language</em>
               </div>
               <div class="lang--selector">
-                <ul id="languageContainer" class="lang--list">
-                  <li
-                    data-lang="es"
-                    data-section="header"
-                    data-content="title-es"
-                    title="Spanish"
-                    class="lang--list-item"
-                  >
-                    <span data-lang="es" lang="es">
-                      ES
-                    </span>
+                <ul class="lang--list">
+                  <li title="Spanish" class="lang--list-item">
+                    <span lang="es">ES</span>
                     <img
-                      data-lang="es"
-                      data-section="header"
-                      data-content="alt-es"
                       src="/icons/spain.svg"
                       alt="Flag of The Dominican Republic"
                     />
                   </li>
-                  <li
-                    data-lang="en"
-                    data-section="header"
-                    data-content="title-en"
-                    title="English"
-                    class="lang--list-item"
-                  >
-                    <span data-lang="en" lang="en">
-                      EN
-                    </span>
-                    <img
-                      data-lang="en"
-                      data-section="header"
-                      data-content="alt-en"
-                      src="/icons/usa.svg"
-                      alt="Flag of The United States"
-                    />
+                  <li title="English" class="lang--list-item">
+                    <span lang="en">EN</span>
+                    <img src="/icons/usa.svg" alt="Flag of The United States" />
                   </li>
                 </ul>
               </div>

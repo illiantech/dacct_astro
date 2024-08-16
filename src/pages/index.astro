@@ -9,15 +9,19 @@ import "../styles/home_page/programs.css";
 import "../styles/home_page/slider_alliances.css";
 import "../styles/home_page/patrons.css";
 
+import MenuSelect from "../enums";
 import BlogHome from "../components/home/Blog.tsx";
 import Strategies from "../components/home/Strategies.tsx";
 import ProgramsHome from "../components/home/Programs.tsx";
 import SliderAlliance from "../components/home/SliderAlliance.tsx";
 ---
 
-<Layout menuSelect={0} title="Dominican American Coalition of Connecticut">
+<Layout
+  menuSelect={MenuSelect.home}
+  title="Dominican American Coalition of Connecticut"
+>
   <div class="slider-container">
-    <div class="slider" id="slider">
+    <div class="slider">
       <picture class="slider--picture1">
         <source
           media="(min-width: 1300px)"
@@ -25,8 +29,6 @@ import SliderAlliance from "../components/home/SliderAlliance.tsx";
         />
 
         <img
-          data-section="slider"
-          data-content="alt-img1"
           class="slider--img1"
           src="/img/webp/home_page/slider/slider-0-720-webp.webp"
           alt="Great women in a classroom sharing ideas"
@@ -39,8 +41,6 @@ import SliderAlliance from "../components/home/SliderAlliance.tsx";
         />
 
         <img
-          data-section="slider"
-          data-content="alt-img2"
           class="slider--img2"
           src="/img/webp/home_page/slider/slider-1-720-webp.webp"
           alt="Imposing church with flags of The Dominican Republic"
@@ -53,8 +53,6 @@ import SliderAlliance from "../components/home/SliderAlliance.tsx";
         />
 
         <img
-          data-section="slider"
-          data-content="alt-img3"
           class="slider--img3"
           src="/img/webp/home_page/slider/slider-2-720-webp.webp"
           alt="Elderly people playing music with latino instruments"
@@ -67,8 +65,6 @@ import SliderAlliance from "../components/home/SliderAlliance.tsx";
         />
 
         <img
-          data-section="slider"
-          data-content="alt-img4"
           class="slider--img4"
           src="/img/webp/home_page/slider/slider-3-720-webp.webp"
           alt="Diverse people joining hands as a symbol of alliance"
@@ -77,14 +73,7 @@ import SliderAlliance from "../components/home/SliderAlliance.tsx";
     </div>
 
     <div class="title-container">
-      <h1
-        data-section="slider"
-        data-content="title-principal"
-        id="title"
-        class="title"
-        transition:name="titleBanner"
-        transition:animate="none"
-      >
+      <h1 class="title" transition:name="titleBanner" transition:animate="none">
         The Dominican American Coalition of Connecticut
       </h1>
     </div>
@@ -95,14 +84,10 @@ import SliderAlliance from "../components/home/SliderAlliance.tsx";
 
   <div class="conocenos">
     <section class="conocenos--section">
-      <h2 data-section="about_us" data-content="title" class="conocenos--title">
+      <h2 class="conocenos--title">
         What does The Dominican American Coalition of Connecticut do?
       </h2>
-      <p
-        data-section="about_us"
-        data-content="paragraph"
-        class="conocenos--paragraph"
-      >
+      <p class="conocenos--paragraph">
         Through the execution of human development programs, The
         Dominican-American Coalition of Connecticut works for the benefit of the
         inhabitants of the State of Connecticut by applying models of social
@@ -138,66 +123,30 @@ import SliderAlliance from "../components/home/SliderAlliance.tsx";
   <hr />
   <!-- patroners-->
   <section>
-    <h2 data-section="patrons" data-content="title" class="title-patrons">
-      Sponsors
-    </h2>
-    <p
-      data-section="patrons"
-      data-content="sub-title0"
-      class="paragraph-patrons"
-    >
-      Click our donate button!
-    </p>
+    <h2 class="title-patrons">Sponsors</h2>
+    <p class="paragraph-patrons">Click our donate button!</p>
     <div class="container-patrons">
       <section class="patrons--sections">
-        <h3
-          data-section="patrons"
-          data-content="sub-title1"
-          class="patrons--title"
-        >
-          Community Member Support
-        </h3>
+        <h3 class="patrons--title">Community Member Support</h3>
         <ul class="patrons--list">
-          <li data-section="patrons" data-content="sub-title1_list0">
-            Support to the Latino Community in the state of Connecticut.
-          </li>
+          <li>Support to the Latino Community in the state of Connecticut.</li>
         </ul>
         <p class="patrons--money">$1 – $1k</p>
       </section>
       <section class="patrons--sections">
-        <h3
-          data-section="patrons"
-          data-content="sub-title2"
-          class="patrons--title"
-        >
-          Community Benefactor
-        </h3>
+        <h3 class="patrons--title">Community Benefactor</h3>
         <ul class="patrons--list">
-          <li data-section="patrons" data-content="sub-title2_list0">
-            Extra Public recognition.
-          </li>
-          <li data-section="patrons" data-content="sub-title2_list1">
-            Support to the Latino Community in the state of Connecticut.
-          </li>
+          <li>Extra Public recognition.</li>
+          <li>Support to the Latino Community in the state of Connecticut.</li>
         </ul>
         <p class="patrons--money">$1k – $5k</p>
       </section>
       <section class="patrons--sections">
-        <h3
-          data-section="patrons"
-          data-content="sub-title3"
-          class="patrons--title"
-        >
-          Community Champion
-        </h3>
+        <h3 class="patrons--title">Community Champion</h3>
         <ul class="patrons--list">
-          <li data-section="patrons" data-content="sub-title3_list0">
-            Extra Public recognition.
-          </li>
-          <li data-section="patrons" data-content="sub-title3_list1">
-            Social media coverage.
-          </li>
-          <li data-section="patrons" data-content="sub-title3_list2">
+          <li>Extra Public recognition.</li>
+          <li>Social media coverage.</li>
+          <li>
             Display partner logo in all of our platforms and media
             communications.
           </li>
@@ -205,32 +154,16 @@ import SliderAlliance from "../components/home/SliderAlliance.tsx";
         <p class="patrons--money">$5k – $10k</p>
       </section>
       <section class="patrons--sections">
-        <h3
-          data-section="patrons"
-          data-content="sub-title4"
-          class="patrons--title"
-        >
-          DACCT Special Patron
-        </h3>
+        <h3 class="patrons--title">DACCT Special Patron</h3>
         <ul class="patrons--list">
-          <li data-section="patrons" data-content="sub-title4_list0">
-            Extra social media coverage.
-          </li>
-          <li data-section="patrons" data-content="sub-title4_list1">
-            Official sponsor video.
-          </li>
-          <li data-section="patrons" data-content="sub-title4_list2">
+          <li>Extra social media coverage.</li>
+          <li>Official sponsor video.</li>
+          <li>
             Recognition in plaque, big banner and ALL benefits from the
             Community Benefactor.
           </li>
         </ul>
-        <p
-          data-section="patrons"
-          data-content="sub-title4_paragraph"
-          class="patrons--money"
-        >
-          $10K and up
-        </p>
+        <p class="patrons--money">$10K and up</p>
       </section>
     </div>
   </section>
